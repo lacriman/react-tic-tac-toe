@@ -1,13 +1,15 @@
-import "./styles/App.css";
-import { Board } from "./games/tic-tac-toe/components/Board.tsx";
+import { Link, Outlet } from "react-router-dom";
 
-function App() {
+export function App() {
   return (
     <>
-      <h1 className="title">Tic-Tac-Toe</h1>
-      <Board />
+      <nav className="nav">
+        <Link to="/">🎮 Arcade</Link>
+      </nav>
+
+      <main>
+        <Outlet/>
+      </main>
     </>
   );
 }
-
-export default App;

@@ -3,10 +3,11 @@ import { Square } from "./Square.tsx";
 import { calculateWinner } from "../logic/calculateWinner.ts";
 import { WinnerMessage } from "@/shared/components/WinnerMessage.tsx";
 import styles from "../TicTacToe.module.css";
+import type { Player, Squares } from "../types.ts";
 
 export function Board() {
-  const [squares, setSquares] = useState<string[]>(Array(9).fill(""));
-  const [turn, setTurn] = useState("x");
+  const [squares, setSquares] = useState<Squares>(Array(9).fill(""));
+  const [turn, setTurn] = useState<Player>("x");
   const winner = calculateWinner(squares);
 
   function handleClick(i: number) {
