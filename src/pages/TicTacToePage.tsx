@@ -1,6 +1,6 @@
-import { Board } from "../games/tic-tac-toe/components/Board";
+import { Board } from "@/games/tic-tac-toe";
 
-export function TicTacToe() {
+export function TicTacToePage() {
   return (
     <>
       <h1 className="title">Tic-Tac-Toe</h1>

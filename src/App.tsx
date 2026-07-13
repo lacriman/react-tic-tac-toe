@@ -4,11 +4,11 @@ export function App() {
   return (
     <>
       <nav className="nav">
-        <Link to="/">🎮 Arcade</Link>
+        <Link to="/">🎮 Home</Link>
       </nav>
 
       <main>
-        <Outlet/>
+        <Outlet />
       </main>
     </>
   );
