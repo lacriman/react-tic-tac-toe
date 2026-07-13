@@ -1,0 +1,16 @@
+.board {
+  display: grid;
+  grid-template: 5rem 5rem 5rem / 5rem 5rem 5rem;
+  gap: 0.5rem;
+}
+
+.square {
+  font-size: 3rem;
+  width: 5rem;
+  height: 5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: 0.3s;
+}
+
+
