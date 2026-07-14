@@ -1,14 +1,14 @@
 import { Link, Outlet } from "react-router-dom";
-import "./styles/App.css";
+import styles from "./App.module.css";
 
 export function App() {
   return (
-    <section className="homeWrapper">
-      <nav className="nav">
+    <section className={styles.wrapper}>
+      <nav className={styles.nav}>
         <Link to="/">Go Home 🎮</Link>
       </nav>
 
-      <main className="home-page__wrapper">
+      <main className={styles.content}>
         <Outlet />
       </main>
     </section>

@@ -1,4 +1,4 @@
-.homeWrapper {
+.wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,7 +30,7 @@
   }
 }
 
-.home-page__wrapper {
+.content {
   display: flex;
   justify-content: center;
   text-align: center;
