@@ -1,0 +1,48 @@
+import { useState } from "react";
+import { MoveButton } from "./MoveButton.tsx";
+import { calculateWinner } from "../logic/calculateWinner.ts";
+import styles from "../RockPaperScissors.module.css";
+import type { Move, Result } from "../types.ts";
+
+const MOVES: Move[] = ["rock", "paper", "scissors"];
+
+const RESULT_TEXT: Record<Result, string> = {
+  win: "You win! 🎉",
+  lose: "You lose 😔",
+  draw: "It's a draw 🤝",
+};
+
+export function RockPaperScissors() {
+  const [playerMove, setPlayerMove] = useState<Move | null>(null);
+  const [computerMove, setComputerMove] = useState<Move | null>(null);
+
+  // derived, not stored — same idea as `winner` in tic-tac-toe
+  const result =
+    playerMove && computerMove ?
+      calculateWinner(playerMove, computerMove)
+    : null;
+
+  function play(move: Move) {
+    const computer = MOVES[Math.floor(Math.random() * MOVES.length)];
+    setPlayerMove(move);
+    setComputerMove(computer);
+  }
+
+  return (
+    <section className={styles.wrapper}>
+      {result && (
+        <div className={styles.result}>
+          <p>You picked {playerMove}</p>
+          <p>Computer picked {computerMove}</p>
+          <h2>{RESULT_TEXT[result]}</h2>
+        </div>
+      )}
+      
+      <div className={styles.moves}>
+        {MOVES.map((move) => (
+          <MoveButton key={move} move={move} onMoveClick={() => play(move)} />
+        ))}
+      </div>
+    </section>
+  );
+}
