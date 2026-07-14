@@ -3,13 +3,13 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: var(--space-4);
 }
 
 .reset {
-  font-size: 1.5rem;
-  width: 10rem;
+  font-size: var(--font-size-lg);
+  width: var(--size-button);
   cursor: pointer;
-  padding: 0.5rem;
-  transition: 0.3s;
+  padding: var(--space-2);
+  transition: var(--transition);
 }

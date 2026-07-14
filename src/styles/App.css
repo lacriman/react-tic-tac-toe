@@ -10,23 +10,23 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: gray;
-  padding: 1rem 2rem;
+  background-color: var(--color-surface);
+  padding: var(--space-4) var(--space-8);
   display: flex;
   justify-content: center;
 }
 
 .nav a {
   text-decoration: none;
-  font-size: 1.5rem;
-  padding: 1rem 1.5rem;
-  border-radius: 1.5rem;
-  background-color: gray;
-  color: rgb(255, 255, 255);
-  transition: .3s;
+  font-size: var(--font-size-lg);
+  padding: var(--space-4) var(--space-6);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface);
+  color: var(--color-text-inverse);
+  transition: var(--transition);
 
   &:hover {
-    background-color: rgb(78, 78, 78);
+    background-color: var(--color-surface-hover);
   }
 }
 

@@ -1,20 +1,17 @@
 .board {
   display: grid;
-  grid-template: 5rem 5rem 5rem / 5rem 5rem 5rem;
-  gap: 0.5rem;
+  grid-template: repeat(3, var(--size-square)) / repeat(3, var(--size-square));
+  gap: var(--space-2);
 }
 
 .square {
   display: flex;
   justify-content: center;
-  font-size: 3rem;
-  width: 5rem;
-  height: 5rem;
+  font-size: var(--font-size-xl);
+  width: var(--size-square);
+  height: var(--size-square);
   cursor: pointer;
-  padding: 0.5rem;
-  transition: 0.3s;
+  padding: var(--space-2);
+  transition: var(--transition);
   text-align: center;
 }
-
-
-

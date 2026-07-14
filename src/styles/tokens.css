@@ -1,0 +1,33 @@
+/*
+  Design tokens — the single source of truth for colors, spacing, sizes, etc.
+  Defined once on :root, so every *.module.css can use them via var(--name).
+  Change a value here → it changes everywhere. Never hardcode these values in components.
+*/
+
+:root {
+  /* ── Color ─────────────────────────────── */
+  --color-surface: gray; /* nav bar, buttons, list items */
+  --color-surface-hover: rgb(78, 78, 78); /* hover state for surfaces */
+  --color-text-inverse: rgb(255, 255, 255); /* text sitting on a dark surface */
+
+  /* ── Spacing scale ─────────────────────── */
+  --space-2: 0.5rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+
+  /* ── Sizing ────────────────────────────── */
+  --size-square: 5rem; /* a tic-tac-toe cell */
+  --size-button: 10rem; /* reset button width */
+
+  /* ── Typography ────────────────────────── */
+  --font-size-lg: 1.5rem;
+  --font-size-xl: 3rem;
+
+  /* ── Radius ────────────────────────────── */
+  --radius: 1rem;
+  --radius-lg: 1.5rem;
+
+  /* ── Motion ────────────────────────────── */
+  --transition: 0.3s;
+}
