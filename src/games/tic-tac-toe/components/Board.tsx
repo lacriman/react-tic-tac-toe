@@ -28,9 +28,9 @@ export function Board() {
 
   return (
     // function can return only one value, <> </> is sugar and doesn't exist in DOM
-    <>
+    <section className={styles.wrapper}>
       <WinnerMessage winner={winner} onReset={resetBoard} />
-      <section className={styles.board}>
+      <div className={styles.board}>
         {squares.map(
           (
             cell,
@@ -39,7 +39,7 @@ export function Board() {
             <Square key={i} value={cell} onSquareClick={() => handleClick(i)} />
           ),
         )}
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

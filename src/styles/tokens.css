@@ -6,12 +6,21 @@
 
 :root {
   /* ── Color ─────────────────────────────── */
-  --color-surface: gray; /* nav bar, buttons, list items */
-  --color-surface-hover: rgb(78, 78, 78); /* hover state for surfaces */
-  --color-text-inverse: rgb(255, 255, 255); /* text sitting on a dark surface */
+  --color-bg: #f4f5f7; /* app background */
+  --color-surface: #ffffff; /* cards, buttons, nav */
+  --color-surface-hover: #eef0f3; /* hover on neutral surfaces */
+  --color-border: #e4e7ec; /* hairline borders */
+
+  --color-text: #1f2430; /* primary text */
+  --color-text-muted: #6b7280; /* secondary text */
+  --color-text-inverse: #ffffff; /* text on the accent color */
+
+  --color-accent: #6366f1; /* indigo — primary actions, marks */
+  --color-accent-hover: #4f46e5; /* darker indigo for hover */
 
   /* ── Spacing scale ─────────────────────── */
   --space-2: 0.5rem;
+  --space-3: 0.75rem;
   --space-4: 1rem;
   --space-6: 1.5rem;
   --space-8: 2rem;
@@ -21,13 +30,22 @@
   --size-button: 10rem; /* reset button width */
 
   /* ── Typography ────────────────────────── */
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-size-md: 1rem;
   --font-size-lg: 1.5rem;
   --font-size-xl: 3rem;
 
   /* ── Radius ────────────────────────────── */
-  --radius: 1rem;
-  --radius-lg: 1.5rem;
+  --radius-sm: 0.5rem;
+  --radius: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-full: 999px;
+
+  /* ── Shadows (soft, minimal) ───────────── */
+  --shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.06);
+  --shadow-md: 0 4px 12px rgba(16, 24, 40, 0.08);
+  --shadow-lg: 0 12px 28px rgba(16, 24, 40, 0.12);
 
   /* ── Motion ────────────────────────────── */
-  --transition: 0.3s;
+  --transition: 0.2s ease;
 }

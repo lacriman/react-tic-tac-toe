@@ -1,4 +1,14 @@
+.wrapper {
+  display: grid;
+  grid-template-rows: 10rem 15rem;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
 .board {
+  grid-row: 2; 
+  margin: 0 auto;
   display: grid;
   grid-template: repeat(3, var(--size-square)) / repeat(3, var(--size-square));
   gap: var(--space-2);
@@ -6,12 +16,27 @@
 
 .square {
   display: flex;
+  align-items: center;
   justify-content: center;
   font-size: var(--font-size-xl);
+  font-weight: 700;
+  text-transform: uppercase;
   width: var(--size-square);
   height: var(--size-square);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  color: var(--color-accent);
   cursor: pointer;
-  padding: var(--space-2);
-  transition: var(--transition);
-  text-align: center;
+  transition:
+    background-color var(--transition),
+    box-shadow var(--transition),
+    transform var(--transition);
+}
+
+.square:hover {
+  background-color: var(--color-surface-hover);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
 }

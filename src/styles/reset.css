@@ -22,6 +22,10 @@ body {
   line-height: 1.5;
   /* 5. Improve text rendering */
   -webkit-font-smoothing: antialiased;
+  /* base look — pulls from design tokens */
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
 }
 
 /* 6. Improve media defaults */
@@ -76,7 +80,5 @@ h6 {
 
 
 #root {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
+  min-height: 100vh;
 }

@@ -1,28 +1,45 @@
 .homePage {
-  margin: 0 auto;
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  gap: var(--space-4);
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.homePage h1 {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  flex-direction: row;
-  gap: var(--space-4);
+  gap: var(--space-6);
 }
 
 .item {
-  padding: var(--space-2) var(--space-4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 12rem;
+  min-height: 8rem;
+  padding: var(--space-6);
   background-color: var(--color-surface);
-  border-radius: var(--radius);
-  color: var(--color-text-inverse);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  color: var(--color-text);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
   text-decoration: none;
   cursor: pointer;
-  transition: var(--transition);
+  transition: transform var(--transition), box-shadow var(--transition),
+    border-color var(--transition);
+}
 
-  &:hover {
-    background-color: var(--color-surface-hover);
-  }
+.item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-accent);
 }
