@@ -3,6 +3,7 @@ import { MoveButton } from "./MoveButton.tsx";
 import { calculateWinner } from "../logic/calculateWinner.ts";
 import styles from "../RockPaperScissors.module.css";
 import type { Move, Result } from "../types.ts";
+import { randomItem } from "@/shared/utils/random.ts";
 
 const MOVES: Move[] = ["rock", "paper", "scissors"];
 
@@ -23,7 +24,7 @@ export function RockPaperScissors() {
     : null;
 
   function play(move: Move) {
-    const computer = MOVES[Math.floor(Math.random() * MOVES.length)];
+    const computer = randomItem(MOVES);
     setPlayerMove(move);
     setComputerMove(computer);
   }
@@ -37,7 +38,7 @@ export function RockPaperScissors() {
           <h2>{RESULT_TEXT[result]}</h2>
         </div>
       )}
-      
+
       <div className={styles.moves}>
         {MOVES.map((move) => (
           <MoveButton key={move} move={move} onMoveClick={() => play(move)} />
