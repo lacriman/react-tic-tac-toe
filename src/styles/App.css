@@ -1,4 +1,17 @@
+.homeWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: gray;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: center;
 }
@@ -6,7 +19,15 @@
 .nav a {
   text-decoration: none;
   font-size: 1.5rem;
-  color: black;
+  padding: 1rem 1.5rem;
+  border-radius: 1.5rem;
+  background-color: gray;
+  color: rgb(255, 255, 255);
+  transition: .3s;
+
+  &:hover {
+    background-color: rgb(78, 78, 78);
+  }
 }
 
 .home-page__wrapper {

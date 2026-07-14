@@ -73,3 +73,10 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+
+#root {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}

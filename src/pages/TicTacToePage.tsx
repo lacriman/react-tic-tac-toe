@@ -1,9 +1,9 @@
 import { Board } from "@/games/tic-tac-toe";
-import "./TicTacToePage.css"
+import "./TicTacToePage.css";
 
 export function TicTacToePage() {
   return (
-    <section>
+    <section className="tic-tac-toe__wrapper">
       <h1 className="title">Tic-Tac-Toe</h1>
       <Board />
     </section>
