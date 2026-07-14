@@ -1,6 +1,7 @@
-.tic-tac-toe__wrapper {
+.tic-tac-toe {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
   gap: 1rem;
 }
