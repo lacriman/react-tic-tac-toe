@@ -19,5 +19,7 @@ export function calculateWinner(board: string[]): string | null {
     }
   }
 
+  if (!board.includes("")) return "nobody";
+
   return null;
 }

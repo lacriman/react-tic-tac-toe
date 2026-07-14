@@ -12,7 +12,11 @@ export function WinnerMessage({
   return (
     <>
       <div className={styles.winMessage}>
-        <h1 className={styles.winTitle}>Winner is: {winner} 🎉🎊🍾</h1>
+        <h1 className={styles.winTitle}>
+          {winner === "nobody" ?
+            "It's a tie 😔"
+          : `Winner is: ${winner} 🎉🎊🍾`}
+        </h1>
         <button className={styles.reset} onClick={() => onReset()}>
           Reset
         </button>
