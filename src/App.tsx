@@ -1,4 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
+import "./styles/App.css";
 
 export function App() {
   return (
@@ -7,7 +8,7 @@ export function App() {
         <Link to="/">🎮 Home</Link>
       </nav>
 
-      <main>
+      <main className="home-page__wrapper">
         <Outlet />
       </main>
     </>

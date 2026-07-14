@@ -5,12 +5,16 @@
 }
 
 .square {
+  display: flex;
+  justify-content: center;
   font-size: 3rem;
   width: 5rem;
   height: 5rem;
   cursor: pointer;
   padding: 0.5rem;
   transition: 0.3s;
+  text-align: center;
 }
+
 
 
