@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Square } from "./Square.tsx";
 import { calculateWinner } from "../logic/calculateWinner.ts";
 import { WinnerMessage } from "@/shared/components/WinnerMessage.tsx";
+import { CurrentPlayer } from "@/shared/components/CurrentPlayer.tsx";
 import styles from "../TicTacToe.module.css";
 import type { Player, Squares, PlayerTurn } from "../types.ts";
 import { Score } from "@/shared/components/Score.tsx";
@@ -62,7 +63,7 @@ export function Board() {
   return (
     // function can return only one value, <> </> is sugar and doesn't exist in DOM
     <section className={styles.wrapper}>
-      {!winner && <h1>{currentPlayer} turn</h1>}
+      {!winner && <CurrentPlayer currentPlayer={currentPlayer} />}
 
       <WinnerMessage winner={winnerName} onReset={resetBoard} />
 
