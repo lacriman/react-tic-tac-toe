@@ -1,4 +1,4 @@
-import type { Move } from "../types.ts";
+import type { Move } from "../types";
 import styles from "../RockPaperScissors.module.css";
 
 export function MoveButton({

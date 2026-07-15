@@ -1,4 +1,4 @@
-import type { Move, Result } from "../types.ts";
+import type { Move, Result } from "../types";
 
 // each move beats the one it maps to
 const BEATS: Record<Move, Move> = {

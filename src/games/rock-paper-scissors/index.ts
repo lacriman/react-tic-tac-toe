@@ -1,2 +1,2 @@
 export { RockPaperScissors } from "./components/RockPaperScissors";
-export type { Move, Result } from "./types.ts";
+export type { Move, Result } from "./types";

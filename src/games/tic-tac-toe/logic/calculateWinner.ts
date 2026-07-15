@@ -1,4 +1,6 @@
-export function calculateWinner(board: string[]): string | null {
+import type { Cell, GameResult } from "../types";
+
+export function calculateWinner(board: Cell[]): GameResult | null {
   const lines = [
     [0, 1, 2],
     [3, 4, 5],
@@ -12,14 +14,17 @@ export function calculateWinner(board: string[]): string | null {
     [2, 4, 6], // diagonals
   ];
 
-  //check combinations
+  // check combinations
   for (const [a, b, c] of lines) {
-    if (board[a] && board[a] === board[b] && board[a] === board[c]) {
-      return board[a];
+    const mark = board[a];
+    // truthy check narrows `mark` from Cell ("x" | "o" | "") to Player,
+    // so the return type stays Player — never the empty string.
+    if (mark && mark === board[b] && mark === board[c]) {
+      return mark;
     }
   }
 
-  if (!board.includes("")) return "nobody";
+  if (!board.includes("")) return "draw";
 
   return null;
 }

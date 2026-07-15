@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { Square } from "./Square.tsx";
-import { calculateWinner } from "../logic/calculateWinner.ts";
-import { WinnerMessage } from "@/shared/components/WinnerMessage.tsx";
-import { CurrentPlayer } from "@/shared/components/CurrentPlayer.tsx";
+import { Square } from "./Square";
+import { WinnerMessage } from "./WinnerMessage";
+import { CurrentPlayer } from "./CurrentPlayer";
+import { calculateWinner } from "../logic/calculateWinner";
+import { Score } from "@/shared/components/Score";
+import { useScore } from "@/shared/hooks/useScore";
 import styles from "../TicTacToe.module.css";
-import type { Player, Squares, PlayerTurn } from "../types.ts";
-import { Score } from "@/shared/components/Score.tsx";
-import { useScore } from "@/shared/hooks/useScore.ts";
+import type { Player, Squares, PlayerTurn } from "../types";
 
 // each mark belongs to one player — a single source of truth for the names,
 // reused by the turn heading, the winner message and the score labels.
@@ -47,7 +47,7 @@ export function Board() {
     } else if (result === "o") {
       player2.addWin();
       player1.addLoss();
-    } else if (result === "nobody") {
+    } else if (result === "draw") {
       player1.addDraw();
       player2.addDraw();
     } else {

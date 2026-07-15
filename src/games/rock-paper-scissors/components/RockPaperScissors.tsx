@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { MoveButton } from "./MoveButton.tsx";
-import { calculateWinner } from "../logic/calculateWinner.ts";
+import { MoveButton } from "./MoveButton";
+import { calculateWinner } from "../logic/calculateWinner";
 import styles from "../RockPaperScissors.module.css";
 import { useScore } from "@/shared/hooks/useScore";
-import { Score } from "@/shared/components/Score.tsx";
-import type { Move, Result } from "../types.ts";
-import { randomItem } from "@/shared/utils/random.ts";
+import { Score } from "@/shared/components/Score";
+import type { Move, Result } from "../types";
+import { randomItem } from "@/shared/utils/random";
 
 const MOVES: Move[] = ["rock", "paper", "scissors"];
 
