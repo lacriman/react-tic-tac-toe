@@ -15,8 +15,8 @@
   --color-text-muted: #6b7280; /* secondary text */
   --color-text-inverse: #ffffff; /* text on the accent color */
 
-  --color-accent: #6366f1; /* indigo — primary actions, marks */
-  --color-accent-hover: #4f46e5; /* darker indigo for hover */
+  --color-accent: #9146ff; /* indigo — primary actions, marks */
+  --color-accent-hover: #7924f8; /* darker indigo for hover */
 
   --color-success: #16a34a; /* wins / positive */
   --color-danger: #dc2626; /* losses / negative */
