@@ -7,11 +7,18 @@
 }
 
 .board {
-  grid-row: 2; 
+  grid-row: 2;
   margin: 0 auto;
   display: grid;
   grid-template: repeat(3, var(--size-square)) / repeat(3, var(--size-square));
   gap: var(--space-2);
+}
+
+.scores {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .square {
